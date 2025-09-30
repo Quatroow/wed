@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Düğün Katılım Formu</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>💍WedSystem(Düğün sahibine göre değişecek)</h1>
+
+    <form id="rsvpForm">
+      <input type="text" id="firstName" placeholder="Adınız" required>
+      <input type="text" id="lastName" placeholder="Soyadınız" required>
+      <input type="tel" id="phone" placeholder="Telefon Numaranız" required>
+
+      <p style="color: beige;">Katılım Durumu:</p>
+      <button type="button" class="attendanceBtn" data-value="Evet">Katılacağım</button>
+      <button type="button" class="attendanceBtn" data-value="Hayır">Katılmayacağım</button>
+
+      <input type="number" id="guestCount" min="1" value="" required>
+      <button type="submit">Gönder</button>
+    </form>
+
+    <div id="confirmation" class="hidden">
+      <h3>✅ Bilgileriniz kaydedildi. Teşekkürler!</h3>
+    </div>
+
+    <p style="color: rgb(255, 255, 255);">Admin paneline gitmek için: <a style="color: rgb(124, 145, 161);" href="admin.html" target="_blank">Admin Paneli</a></p>
+    <caption>Bu form sadece davetliler içindir. Lütfen düğün sahibinden linki alın.</caption>
+  </div>
+ <div class="footer">
+    <p>© 2025 WedSystem. Tüm hakları saklıdır.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
